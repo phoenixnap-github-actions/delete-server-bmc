@@ -1,0 +1,1 @@
+# bmc-deleteserver-github-action
