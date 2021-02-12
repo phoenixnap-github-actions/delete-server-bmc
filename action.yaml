@@ -1,0 +1,40 @@
+name: 'BMC Delete Server'
+description: ''
+
+branding:
+  icon: arrow-down-circle
+  color: blue
+
+runs:
+  using: 'node12'
+  main: 'index.js'
+
+inputs:
+  clientid:
+    description: 'Client ID from application OAuth2 credentials.'
+    required: true
+  clientsecret:
+    description: 'Client Secret from application OAuth2 credentials.'
+    required: true
+
+  serverid:
+    description: 'The resource ID of the server to delete.'
+    required: true
+
+  bmcentrypoint:
+    description: 'The BMC API entrypoint.'
+    required: false
+    default: 'https://api.phoenixnap.com/bmc/v1/'
+  bmctokenhost:
+    description: 'The BMC OIDC token host.'
+    required: false
+    default: 'https://auth.phoenixnap.com'
+  bmctokenpath:
+    description: 'The BMC OIDC token path.'
+    required: false
+    default: '/auth/realms/BMC/protocol/openid-connect/token'
+
+
+outputs:
+  id:
+    description: 'The deleted BMC server ID.'
