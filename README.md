@@ -69,7 +69,7 @@ Bare Metal Cloud Quick Start Guide: [https://developers.phoenixnap.com/quick-sta
 
 ```yaml
 - name: DeleteServer step
-  uses: phoenixnap/bmc-deleteserver-github-action 
+  uses: phoenixnap-github-actions/delete-server-bmc 
   id: deleteserver
   with:
     clientid: ${{secrets.BMC_CLIENT_ID}}
